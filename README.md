@@ -1,10 +1,13 @@
 # YBlur
 用法
 ``` 
-_bgImageLayer = [CALayer layer];
+    //第一步
+    _bgImageLayer = [CALayer layer];
     _bgImageLayer.backgroundColor = [UIColor whiteColor].CGColor;
     _bgImageLayer.frame = self.view.bounds;
     [self.view.layer addSublayer:_bgImageLayer];
+    
+    //第二步
     UIImageView *imgv =[[UIImageView alloc]initWithFrame:self.view.bounds];
     imgv.image = [UIImage imageNamed:@"IMG_2877.JPG"];
     UIImage *img = [imgv.image blurredImageWithSize:CGSizeMake(100, 200)];
